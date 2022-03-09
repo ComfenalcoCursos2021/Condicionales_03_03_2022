@@ -1,16 +1,35 @@
-// Diagrama de flujo promedio
-let prom, nota1, nota2, nota3;
+// Diagrama de flujo ordena 3 numeros
+let n1, n2, n3;
 do{
-    nota1 = parseInt(prompt("Ingrese la nota 1"));
-    nota2 = parseInt(prompt("Ingrese la nota 2"));
-    nota3 = parseInt(prompt("Ingrese la nota 3"));
-}while(isNaN(nota1) | isNaN(nota2) | isNaN(nota3));
-prom = (nota1 + nota2 + nota3) / 3;
-console.log(`Nota 1: ${nota1}, Nota 2: ${nota2}, Nota 3: ${nota3}, Promedio = ${prom}`);
-if(prom >= 7){
-    console.log("Promocion");
-}else if(prom >= 4){
-    console.log("Regular");
+    n1 = parseInt(prompt("Ingrese el numero 1"));
+    n2 = parseInt(prompt("Ingrese el numero 2"));
+    n3 = parseInt(prompt("Ingrese el numero 3"));
+}while(isNaN(n1) | isNaN(n2) | isNaN(n3));
+if(n1 >= n2 & n1 >= n3){
+    console.log("Mayor ",n1);
+    if(n2 >= n3){
+        console.log("Medio ",n2);
+        console.log("Menor ",n3);
+    }else{
+        console.log("Medio ",n3);
+        console.log("Menor ",n2);
+    }
+}else if(n2 >= n3){
+    console.log("Mayor ",n2);
+    if(n1 >= n3){
+        console.log("Medio ",n1);
+        console.log("Menor ",n3);
+    }else{
+        console.log("Medio ",n3);
+        console.log("Menor ",n1);
+    }
 }else{
-    console.log("Reprobado");
+    console.log("Mayor ",n3);
+    if(n2 >= n1){
+        console.log("Medio ",n2);
+        console.log("Menor ",n1);
+    }else{
+        console.log("Medio ",n1);
+        console.log("Menor ",n2);
+    }
 }
